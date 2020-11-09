@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title> m3m3$ </title> 
+        <link href="styles.css" rel="stylesheet" type="text/css">       
+    </head>
+
+    <body>
+        <h1> life in quarantine </h1>
+        <p> 8 months into quarantine and memes are the only things keeping me going :P <br>
+            Here are some memes which I think represent my life right now, especially with online classes draining the life out of everyone.
+        </p>
+        <div id="slideshow">
+            <img src="IMG_5331.JPG" class="landscape">
+            <img src="IMG_5968.JPG" class="portrait">
+            <img src="IMG_5557.JPG" class="landscape">
+            <img src="IMG_5523.JPG" class="landscape">
+            <img src="IMG_5486.JPG" class="landscape">
+            <img src="IMG_5484.JPG" class="portrait">
+            <img src="IMG_5290.JPG" class="landscape">
+            <img src="IMG_5243.JPG" class="landscape">
+            <img src="IMG_5242.JPG" class="landscape">
+            <img src="IMG_5055.JPG" class="landscape">
+            <img src="IMG_5054.JPG" class="landscape">
+            <img src="IMG_4990.JPG" class="landscape">
+            <img src="IMG_4980.JPG" class="landscape">
+            <img src="IMG_4936.JPG" class="landscape">
+            <img src="IMG_4932.JPG" class="landscape">
+            <img src="IMG_4643.JPG" class="landscape">
+            <img src="IMG_4150.JPG" class="landscape">
+            <img src="IMG_4004.JPG" class="landscape">
+        </div>
+        <p> I got to go out for awhile (although i just stayed in the car) and I got to say, I really do miss the <a href="subpage.html">outside world</a> </p>
+
+    </body>
+    <script>
+        var slideShow = function(container) {
+            this.images = [];
+            this.curImage = 0;
+            for (i = 0; i < container.childElementCount; i++) {
+                this.images.push(container.children[i]);
+                this.images[i].style.display = "none";
+            }
+    
+        var nextSlide = function() {
+            for (var i = 0; i < this.images.length; i++) {
+                this.images[i].style.display = "none";
+            }
+            this.images[this.curImage].style.display = "block";
+            this.curImage++;
+            if (this.curImage >= this.images.length) {
+                this.curImage = 0;
+            }
+            window.setTimeout(nextSlide.bind(this), 1000);
+            };
+    
+        nextSlide.call(this);
+        };
+        slideShow(document.getElementById("slideshow"));
+    </script>
+    
+</html>
